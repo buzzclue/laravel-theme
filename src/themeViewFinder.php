@@ -65,7 +65,7 @@ class themeViewFinder extends FileViewFinder
 
         // Search $paths array and remap paths that start with a key of $pathsMap array.
         // replace with the value of $pathsMap array
-        $themeSubPaths = [];
+        $themeSubPaths = ["vendor/{$namespace}"];
         foreach ($paths as $path) {
             $pathRelativeToApp = substr($path, strlen(base_path()) + 1);
             // Ignore paths in composer installed packages (paths inside vendor folder)
